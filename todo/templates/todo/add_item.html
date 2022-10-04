@@ -11,15 +11,16 @@
 <body>
     <h1>Add a ToDo item:</h1>
     <form method="post" action="add">
+        {% csrf_token %}
         <div>
             <p>
-                <label for="id_name"></label>
+                <label for="id_name">Task: </label>
                 <input type="text" id="id_name" name="item_name" />
             </p>
         </div>
         <div>
             <p>
-                <label for="id_done"></label>
+                <label for="id_done">Done?</label>
                 <input type="checkbox" id="id_done" name="done" />
             </p>
         </div>
